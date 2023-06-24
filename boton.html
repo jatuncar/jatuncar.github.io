@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+.c2 {
+  position:absolute; 
+  left:300px; 
+  top:300px; 
+  width:50px; 
+  height:50px;
+}
+.c1 {
+  position:absolute; 
+  left:350px;
+  top:300px;
+  width:50px;
+  height:50px;
+}
+</style>
+</head>
+<body>
+<h1>Prueba de JavaScript</h1>
+<script>
+  var flag=1;
+  function t(){
+    if(flag==1){
+      N.style.top="75px";
+      N.style.left="700px"
+    } if(flag==2){
+      N.style.top="115px";
+      N.style.left="100px"
+    } if(flag==3){
+      N.style.top="300px";
+      N.style.left="350px"
+    }
+    flag = flag + 1;
+    if (flag==4){
+      flag=1
+    }
+  }
+  function al(){
+    alert("Correcto!")
+  }
+</script>
+Te parece interesante el curso?
+    <div id="N" class="c1">
+      <form>
+        <input type="button" value="NO" onmouseover="t()" />
+      </form>
+    </div>
+    <div id="Y" class="c2">
+      <form>
+        <input type="button" value="SI" onclick="al()" />
+      </form>
+    </div>
+</body>
+</html>   

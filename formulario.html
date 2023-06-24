@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+			<img id="imgbaner" alt="imagen de farmacia" class="imgbaner" src="imagenes/imegen1.png" >
+		</header>
+		<div class="row">
+            <div class="col-6 col-sm-4">
+                <h1>Registro de ventas</h1>
+                <form id="formulario">
+                    <div class="form-group"> 
+                        <input type="text"  name="txtnumboleta" required placeholder="Número de Boleta"
+                            class="form-control" id="txtnumboleta">
+                        <span id="numeroBoletaError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtnombre" required placeholder="Nombre de Cliente"
+                            class="form-control" id="txtnombre">
+                        <span id="nombreClienteError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                            <input type="number" name="txtmonto" required placeholder="Monto a pagar"
+                                class="form-control" id="txtmonto">
+                            <span id="montoPagarError" class="error"></span>
+                    </div>
+
+                    <button class="btn btn-primary" >Registrar</button> 
+                </form>
+                <br>
+            </div>
+            <div class="col-6 col-sm-8">
+                <table class="table" id="myTable">
+                    <thead>
+                        <tr>
+                            <th>Boleta</th>
+                            <th>Cliente</th>
+                            <th>Monto</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="detalle">
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                            <td>Row 1 Data 3</td>
+                            <td>Row 1 Data 4</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                            <td>Row 2 Data 3</td>
+                            <td>Row 2 Data 4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/farmacia.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+    </script>
+</body>
+
+</html>
